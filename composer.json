@@ -1,10 +1,11 @@
 {
 	"name" :        "wcm/dependencybundle",
 	"type" :        "library",
-	"description" : "WordPress Styles & Scripts Dependency Loader",
+	"description" : "WordPress Asset Management",
 	"license" :     "MIT",
 	"keywords" : [
 		"WordPress",
+		"Assets",
 		"Stylesheets",
 		"JavaScript",
 		"scripts",

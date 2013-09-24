@@ -1,0 +1,55 @@
+{
+	"name" :          "AssetBundle",
+	"description" :   "WordPress Asset Management",
+	"version" :       "0.1.0",
+	"homepage" :      "https://github.com/franz-josef-kaiser/AssetBundle",
+	"main" :          "src/WCM/AssetBundle/",
+	"readmeFilename": "README.md",
+	"private" :       true,
+	"keywords" : [
+		"wcm",
+		"wecodemore",
+		"WordPress",
+		"assets",
+		"stylesheets",
+		"styles",
+		"javascript",
+		"scripts"
+	],
+	"repository" : {
+		"type" : "git",
+		"url" :  "http://github.com/franz-josef-kaiser/AssetBundle"
+	},
+	"author" : {
+		"name" :  "Franz Josef Kaiser",
+		"email" : "wecodemore@gmail.com",
+		"url" :   "http://unserkaiser.com/"
+	},
+	"licenses" : [
+		{
+			"type" : "MIT",
+			"url" :  "http://www.tldrlegal.com/license/mit-license"
+		}
+	],
+	"engines" : {
+		"node" : ">= 0.6.x"
+	},
+	"dependencies" : {
+	},
+	"devDependencies" : {
+		"grunt-cli" :              "*",
+		"grunt" :                  "*",
+		"grunt-mkdir" :            "*",
+		"grunt-open" :             "*",
+		"grunt-bbb-server" :       "*",
+		"grunt-contrib-jshint" :   "*",
+		"grunt-contrib-nodeunit" : "*",
+		"grunt-contrib-uglify" :   "*",
+		"bower" :                  "*"
+	},
+	"scripts" : {
+		"dist" :        "",
+		"postinstall" : "bower install",
+		"start" :       ""
+	}
+}

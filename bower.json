@@ -1,0 +1,12 @@
+{
+	"name" :    "wcm/dependencybundle",
+	"version" : "0.1.0",
+	"ignore" : [
+		".git",
+		"assets/scripts/vendor",
+		"assets/styles/vendor",
+		"node_modules"
+	],
+	"dependencies" : {
+	}
+}

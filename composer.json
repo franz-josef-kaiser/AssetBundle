@@ -1,0 +1,33 @@
+{
+	"name" :        "wcm/dependencybundle",
+	"type" :        "library",
+	"description" : "WordPress Styles & Scripts Dependency Loader",
+	"license" :     "MIT",
+	"keywords" : [
+		"WordPress",
+		"Stylesheets",
+		"JavaScript",
+		"scripts",
+		"styles"
+	],
+	"authors" : [
+		{
+			"name" : "Franz Josef Kaiser",
+			"email" : "wecodemore@gmail.com"
+		}
+	],
+	"require" : {
+		"php" : ">=5.3.3"
+	},
+	"minimum-stability" : "dev",
+	"autoload" : {
+		"psr-0" : {
+			"WCM" : "src/"
+		}
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "dev"
+		}
+	}
+}

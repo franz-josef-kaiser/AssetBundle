@@ -1,0 +1,1 @@
+So far no documentation aside from the README.md in the project root is provided.

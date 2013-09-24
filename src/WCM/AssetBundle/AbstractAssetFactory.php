@@ -19,6 +19,7 @@ defined( 'ABSPATH' ) OR exit;
  * Class DependencyLoader
  *
  * @package WCM\AssetBundle
+ * @author Franz Josef Kaiser <wecodemore@gmail.com>
  */
 abstract class AbstractAssetFactory implements \Iterator, AssetInterface
 {

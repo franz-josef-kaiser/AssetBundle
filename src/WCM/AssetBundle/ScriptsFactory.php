@@ -19,6 +19,7 @@ defined( 'ABSPATH' ) OR exit;
  * Class ScriptsFactory
  *
  * @package WCMAdminCalendar
+ * @author Franz Josef Kaiser <wecodemore@gmail.com>
  */
 final class ScriptsFactory extends AbstractAssetFactory
 {

@@ -19,6 +19,7 @@ defined( 'ABSPATH' ) OR exit;
  * Class StylesLoader
  *
  * @package WCMAdminCalendar
+ * @author Franz Josef Kaiser <wecodemore@gmail.com>
  */
 final class StylesFactory extends AbstractAssetFactory
 {

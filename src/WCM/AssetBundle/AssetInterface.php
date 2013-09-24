@@ -17,6 +17,7 @@ defined( 'ABSPATH' ) OR exit;
  * Class DependencyInterface
  *
  * @package WCM\AssetBundle
+ * @author Franz Josef Kaiser <wecodemore@gmail.com>
  */
 interface AssetInterface extends \Countable, \ArrayAccess, \Traversable
 {

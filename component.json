@@ -1,5 +1,5 @@
 {
-	"name" :        "wcm/dependencybundle",
+	"name" :        "wcm/assetbundle",
 	"version" :     "0.1",
 	"description" : "WordPress Asset Management",
 	"homepage" :    "https://github.com/franz-josef-kaiser/AssetBundle",

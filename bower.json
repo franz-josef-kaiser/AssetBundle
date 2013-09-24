@@ -1,5 +1,5 @@
 {
-	"name" :    "wcm/dependencybundle",
+	"name" :    "wcm/assetbundle",
 	"version" : "0.1.0",
 	"ignore" : [
 		".git",

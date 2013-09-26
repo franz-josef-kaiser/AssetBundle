@@ -1,6 +1,6 @@
 {
 	"name"        : "WCM/AssetBundle",
-	"type"        : "wordpress-plugin",
+	"type"        : "library",
 	"description" : "WordPress Asset Management",
 	"license"     : "MIT",
 	"keywords" : [
@@ -23,7 +23,7 @@
 	"minimum-stability" : "dev",
 	"autoload" : {
 		"psr-0" : {
-			"WCM\\AssetBundle\\" : "WCM"
+			"WCM\\AssetBundle\\" : ""
 		}
 	},
 	"extra" : {

@@ -23,6 +23,7 @@
 	"minimum-stability" : "dev",
 	"autoload" : {
 		"psr-0" : {
+			"WCM\\AssetBundle" : ""
 		}
 	},
 	"target-dir" : "",

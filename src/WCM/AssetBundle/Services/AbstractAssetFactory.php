@@ -136,7 +136,13 @@ abstract class AbstractAssetFactory implements \Iterator, AssetInterface
 	 */
 	public function getUrl( $file )
 	{
-		return \trailingslashit( $this->url )."{$file}.{$this->getType()}";
+		$file = "{$file}{$this->getExt()}.{$this->getType()}";
+		return \trailingslashit( $this->url ).$file;
+	}
+
+	public function getExt()
+	{
+		return ( defined( 'SCRIPT_DEBUG' ) AND SCRIPT_DEBUG ) ? '.min' : '';
 	}
 
 	/**
@@ -153,7 +159,8 @@ abstract class AbstractAssetFactory implements \Iterator, AssetInterface
 	 */
 	public function getVersion( $file )
 	{
-		return filemtime( $this->getPath()."{$file}.{$this->getType()}" );
+		$file = "{$file}{$this->getExt()}.{$this->getType()}";
+		return filemtime( $this->getPath().$file );
 	}
 
 	/**

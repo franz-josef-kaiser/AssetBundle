@@ -1,5 +1,5 @@
 {
-	"name" :        "wcm/assetbundle",
+	"name" :        "WCM/AssetBundle",
 	"type" :        "library",
 	"description" : "WordPress Asset Management",
 	"license" :     "MIT",

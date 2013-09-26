@@ -1,6 +1,6 @@
 {
 	"name" :        "WCM/AssetBundle",
-	"type" :        "library",
+	"type" :        "wordpress-plugin",
 	"description" : "WordPress Asset Management",
 	"license" :     "MIT",
 	"keywords" : [
@@ -13,7 +13,7 @@
 	],
 	"authors" : [
 		{
-			"name" : "Franz Josef Kaiser",
+			"name" :  "Franz Josef Kaiser",
 			"email" : "wecodemore@gmail.com"
 		}
 	],
@@ -23,9 +23,10 @@
 	"minimum-stability" : "dev",
 	"autoload" : {
 		"psr-0" : {
-			"WCM" : "src/"
+			"WCM\\AssetBundle" : ""
 		}
 	},
+	"target-dir" : "WCM/AssetBundle",
 	"extra": {
 		"branch-alias": {
 			"dev-master": "dev"

@@ -13,8 +13,9 @@
 	],
 	"authors" : [
 		{
-			"name"  : "Franz Josef Kaiser",
-			"email" : "wecodemore@gmail.com"
+			"name"     : "Franz Josef Kaiser",
+			"email"    : "wecodemore@gmail.com"
+			"homepage" : "http://unserkaiser.com"
 		}
 	],
 	"require" : {

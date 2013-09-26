@@ -52,7 +52,8 @@ It will run `npm install` after `composer install` and `npm update` after `compo
 
 ## How To
 
-Example script loading using a method. `jquery` is added as dependency.
+Example script loading using a method.
+The file `filename` will get loaded (to the footer).
 Minified/Uglified scripts expected to have the `.min` extension.
 Expected to have the scripts in a folder structure like you know it from
 common node and similar projects: `assets/scripts/vendor/your-dependency/filename.ext`.
@@ -62,13 +63,12 @@ in a `.gitignore` file by a single folder name.
 ```
 public function loadScripts( $hook_suffix )
 {
-	$min  = defined( 'SCRIPT_DEBUG' ) and SCRIPT_DEBUG ? '.min' : '';
-	$path = 'assets/scripts/vendor/some-script';
+	$path = 'assets/scripts/vendor/your-dependency';
 	$loader = new ScriptsLoader(
 		'some-handle',
-		plugin_dir_path( __FILE__ )."/{$path}/SomeScript{$min}.js",
-		plugins_url( "{$path}/SomeScript{$min}.js", __FILE__ ),
-		array( 'jquery' )
+		plugin_dir_path( __FILE__ ).$path,
+		plugins_url( $path, __FILE__ ),
+		array( 'filename' )
 	);
 	foreach ( $loader as $offset => $script )
 	{
@@ -78,7 +78,9 @@ public function loadScripts( $hook_suffix )
 }
 ```
 
-Example style loading using a method. Has `style` as dependency.
+Example style loading using a method.
+Loads a file named `style.css` from the `~/assets/css` folder.
+Appends `.min.css` if `SCRIPT_DEBUG` isn't set to `true`.
 
 ```
 public function loadStyles( $hook_suffix )
@@ -104,8 +106,9 @@ and `admin_enqueue_script` to load *both* styles and scripts.
 
 Will come with a future version:
 
- 1. Handling/Appending script debug file extension `.min`
+ 1. ---Handling/Appending script debug file extension `.min`---
  1. Localizing script to transport vars from PHP to Javascript
+ 1. Dependency handling
 
 ### Notes
 

@@ -26,7 +26,7 @@
 			"WCM\\AssetBundle\\" : ""
 		}
 	},
-	"target-dir" : "",
+	"target-dir" : "WCM/AssetBundle",
 	"extra" : {
 		"branch-alias" : {
 			"dev-master" : "dev"

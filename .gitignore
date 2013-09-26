@@ -1,5 +1,62 @@
+# Distribution folders #
+########################
+# Grunt defaults
+dist
+# Symfony2 defaults
+web/uploads/*
+web/bundles/*
+
+# Logs
+*/logs/*
+
+# Cache
+*/cache/*
+
+# IDE #
+#######
+# PHP Storm
 .idea
+
+# Composer
 vendor
+
+# NPM
 node_modules
+
+# Bower
 assets/scripts/vendor
 assets/styles/vendor
+
+# VCS #
+#######
+# SVN
+.svn/
+
+# Mercurial
+/.hg/*
+*/.hg/*
+.hgignore
+
+# OS #
+######
+# WIN
+######
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+# Folder config file
+Desktop.ini
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# OSX
+######
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+# Thumbnails
+._*
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes

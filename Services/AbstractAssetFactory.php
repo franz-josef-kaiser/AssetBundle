@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace WCM\AssetBundle;
+namespace WCM\AssetBundle\Services;
 
-use WCM\AssetBundle\AssetInterface;
+use WCM\AssetBundle\Services\AssetInterface;
 
 defined( 'ABSPATH' ) OR exit;
 

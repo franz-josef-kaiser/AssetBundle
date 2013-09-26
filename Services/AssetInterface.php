@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WCM\AssetBundle;
+namespace WCM\AssetBundle\Services;
 
 defined( 'ABSPATH' ) OR exit;
 

@@ -18,5 +18,5 @@ defined( 'ABSPATH' ) OR exit;
 
 require plugin_dir_path( __FILE__ ).'/vendor/autoload.php';
 
-use WCM\AssetBundle\ScriptsFactory,
-	WCM\AssetBundle\StylesFactory;
+use WCM\AssetBundle\Services\ScriptsFactory,
+	WCM\AssetBundle\Services\StylesFactory;

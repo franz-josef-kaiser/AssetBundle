@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WCM\AssetBundle;
+namespace WCM\AssetBundle\Services;
 
-use WCM\AssetBundle\AbstractAssetFactory;
+use WCM\AssetBundle\Services\AbstractAssetFactory;
 
 defined( 'ABSPATH' ) OR exit;
 
 /**
- * Class StylesLoader
+ * Class ScriptsFactory
  *
  * @package WCM\AssetBundle
  * @author Franz Josef Kaiser <wecodemore@gmail.com>
  */
-final class StylesFactory extends AbstractAssetFactory
+final class ScriptsFactory extends AbstractAssetFactory
 {
 	/**
 	 * Receives the arguments and passes it to the parent class.
@@ -36,12 +36,12 @@ final class StylesFactory extends AbstractAssetFactory
 	}
 
 	/**
-	 * Sets the type to CSS/Stylesheets.
+	 * Sets the type to JavaScript.
 	 * @return string
 	 */
 	public function getType()
 	{
-		return "css";
+		return "js";
 	}
 
 	/**
@@ -51,24 +51,25 @@ final class StylesFactory extends AbstractAssetFactory
 	public function register( $offset )
 	{
 		$files = $this->getFiles();
-		$style = $files[ $offset ];
-		$handle = $this->getHandle( $style );
-		! wp_style_is( $handle, 'registered' ) AND wp_register_style(
+		$script = $files[ $offset ];
+		$handle = $this->getHandle( $script );
+		! wp_script_is( $handle, 'registered' ) AND wp_register_script(
 			$handle,
-			$this->getUrl( $style ),
-			array(),
-			$this->getVersion( $style )
+			$this->getUrl( $script ),
+			array( 'jquery' ),
+			$this->getVersion( $script ),
+			true
 		);
 	}
 
 	/**
-	 * Enqueues a file if it isn't already in the enqueue.
+	 * Enqueues a file if it isn't already in the queue.
 	 * @param int $offset
 	 */
 	public function enqueue( $offset )
 	{
 		$handle = $this->getHandle( $offset );
-		! wp_style_is( $handle )
-			AND wp_enqueue_style( $handle );
+		! wp_script_is( $handle )
+			AND wp_enqueue_script( $handle );
 	}
 }

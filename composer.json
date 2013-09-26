@@ -26,6 +26,7 @@
 			"WCM\\" : ""
 		}
 	},
+	"target-dir" : "WCM",
 	"extra" : {
 		"branch-alias" : {
 			"dev-master" : "dev"

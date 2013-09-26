@@ -65,7 +65,7 @@ public function loadScripts( $hook_suffix )
 {
 	$path = 'assets/scripts/vendor/your-dependency';
 	$loader = new ScriptsLoader(
-		'some-handle',
+		'your-prefix',
 		plugin_dir_path( __FILE__ ).$path,
 		plugins_url( $path, __FILE__ ),
 		array( 'filename' )
@@ -86,7 +86,7 @@ Appends `.min.css` if `SCRIPT_DEBUG` isn't set to `true`.
 public function loadStyles( $hook_suffix )
 {
 	$loader = new StylesLoader(
-		'some-handle',
+		'your-prefix',
 		plugin_dir_path( __FILE__ ).'assets/css',
 		plugin_dir_url( __FILE__ ).'assets/css',
 		array( 'style' )
@@ -101,6 +101,22 @@ public function loadStyles( $hook_suffix )
 
 Keep in mind that the appropriate hooks are `wp_enqueue_script`, `login_enqueue_script`
 and `admin_enqueue_script` to load *both* styles and scripts.
+
+### Localize Vars (PHP > JS)
+
+To move variables/data from PHP to JS, you normally use `wp_localize_script()`.
+This is still the case here. Just the handle changed, as all files got prefixed.
+
+In case your first argument (the prefix) was `yourPrefix`, then you the dependency
+was registered with it and you have to use it for your localization as well:
+
+```
+wp_localize_script( 'yourPrefix_fileName', 'libraryObject', array(
+	'foo' => 'value',
+	'bar' => 42,
+	'baz' => array( 'this', 'that', 'whatever' ),
+) );
+```
 
 ### @TODO
 

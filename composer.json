@@ -23,10 +23,9 @@
 	"minimum-stability" : "dev",
 	"autoload" : {
 		"psr-0" : {
-			"WCM\\" : ""
+			"WCM\\" : "AssetBundle"
 		}
 	},
-	"target-dir" : "WCM",
 	"extra" : {
 		"branch-alias" : {
 			"dev-master" : "dev"

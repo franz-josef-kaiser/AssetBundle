@@ -142,7 +142,7 @@ abstract class AbstractAssetFactory implements \Iterator, AssetInterface
 
 	public function getExt()
 	{
-		return ( defined( 'SCRIPT_DEBUG' ) AND SCRIPT_DEBUG ) ? '.min' : '';
+		return ( ! defined( 'SCRIPT_DEBUG' ) OR ! SCRIPT_DEBUG ) ? '.min' : '';
 	}
 
 	/**

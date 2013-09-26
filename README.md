@@ -13,6 +13,43 @@ enabling them to cache files as long as they didn't change.
 The folder structure inherits from the
 [Symfony2 cookbook recommendation](http://symfony.com/doc/current/cookbook/bundles/best_practices.html).
 
+## Install
+
+Best installed using Composer. But as well supports *npm*, *bower* and the *component* package managers.
+
+### Composer
+
+This example composer file will install the dev/master branch from the GitHub account.
+It will run `npm install` after `composer install` and `npm update` after `composer update`.
+
+```
+{
+	"config" : {
+		"vendor-dir" : "vendor"
+	},
+	"require" : {
+		"php" :             ">=5.3.3",
+		"wcm/assetbundle" : "dev-master"
+	},
+	"repositories": [
+		{
+			"type" : "git",
+			"url" :  "git://github.com/franz-josef-kaiser/AssetBundle.git"
+		}
+	],
+	"minimum-stability" : "dev",
+	"scripts" : {
+		"post-install-cmd" : "npm install",
+		"post-update-cmd" :  "npm update"
+	},
+	"autoload" : {
+		"psr-0" : {
+			"YourPluginName" : "src/"
+		}
+	}
+}
+```
+
 ## How To
 
 Example script loading using a method. `jquery` is added as dependency.
